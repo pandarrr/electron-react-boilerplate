@@ -2,6 +2,10 @@
   position: absolute;
 }
 
+.forwardButton {
+  float: right;
+}
+
 .counter {
   position: absolute;
   top: 30%;

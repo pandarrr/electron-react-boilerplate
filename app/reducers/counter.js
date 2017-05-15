@@ -1,21 +1,11 @@
-// @flow
-import { INCREMENT_COUNTER, DECREMENT_COUNTER } from '../actions/counter';
+import { handleActions } from 'redux-actions';
+import actions from '../actions/counter';
 
-export type counterStateType = {
-  counter: number
-};
-
-type actionType = {
-  type: string
-};
-
-export default function counter(state: number = 0, action: actionType) {
-  switch (action.type) {
-    case INCREMENT_COUNTER:
-      return state + 1;
-    case DECREMENT_COUNTER:
-      return state - 1;
-    default:
-      return state;
+export default handleActions({
+  [actions.increment]: (state, action) => {
+    return state + 1;
+  },
+  [actions.decrement]: (state, action) => {
+    return state - 1;
   }
-}
+}, 0);

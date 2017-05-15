@@ -1,4 +1,3 @@
-// @flow
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import styles from './Counter.css';
@@ -19,6 +18,11 @@ class Counter extends Component {
         <div className={styles.backButton} data-tid="backButton">
           <Link to="/">
             <i className="fa fa-arrow-left fa-3x" />
+          </Link>
+        </div>
+        <div className={styles.forwardButton} data-tid="forwardButton">
+          <Link to="/about">
+            <i className="fa fa-arrow-right fa-3x" />
           </Link>
         </div>
         <div className={`counter ${styles.counter}`} data-tid="counter">
